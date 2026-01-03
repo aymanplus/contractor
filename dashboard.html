@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم التنشيطات</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <h1>لوحة تحكم التنشيطات</h1>
+                <p style="color: var(--text-secondary); font-size: 0.8rem;">إدارة بيانات المستخدمين وتراخيصهم</p>
+            </div>
+            <div class="actions">
+                <button class="btn-secondary" onclick="exportData()">
+                    <i class="fas fa-file-export"></i>
+                    تصدير JSON
+                </button>
+                <button class="btn-primary" onclick="openModal()">
+                    <i class="fas fa-plus"></i>
+                    إضافة مستخدم
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>رقم الهاتف</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>الحالة</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="activation-table-body">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modal-title">إضافة مستخدم جديد</h2>
+            </div>
+            <form id="activation-form">
+                <input type="hidden" id="edit-index" value="-1">
+                <div class="form-group">
+                    <label for="name">الاسم بالكامل</label>
+                    <input type="text" id="name" required placeholder="أدخل اسم المستخدم">
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="text" id="phone" required placeholder="مثال: 777123456">
+                </div>
+                <div class="form-group">
+                    <label for="serial">الرقم التسلسلي</label>
+                    <input type="text" id="serial" required placeholder="مثال: DEVICE-ABC-123">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" onclick="closeModal()">إلغاء</button>
+                    <button type="submit" class="btn-primary">حفظ البيانات</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

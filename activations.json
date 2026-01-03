@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Ahmed Ali",
+        "phone": "777123456",
+        "serial": "DEVICE-ABC-123",
+        "active": true
+    },
+    {
+        "name": "Mohammed Saleh",
+        "phone": "771987654",
+        "serial": "DEVICE-XYZ-789",
+        "active": false
+    }
+]
