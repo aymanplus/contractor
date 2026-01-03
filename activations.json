@@ -1,14 +1,14 @@
 [
     {
-        "name": "ayman plus",
-        "phone": "772502588",
-        "serial": "AP3A.240905.015.A2",
-        "active": true
-    },
-    {
         "name": "احمد اخي",
         "phone": "771987654",
         "serial": "HONORALI-N21",
+        "active": true
+    },
+    {
+        "name": "ayman plus",
+        "phone": "772502588",
+        "serial": "AP3A.240905.015.A2",
         "active": true
     },
     {
